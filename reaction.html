@@ -25,6 +25,25 @@
             myTime = Date.now();
             console.log(myTime);
         }
+        function startTime() {
+            var count = document.getElementById("countdown");
+            var x = Math.floor(Math.random()*10 + 2);
+            for (let i = 0; i <= x; i++) {
+                var myid = setTimeout(function () { count.innerHTML = "Count: " + i }, (x - i) * 1000);
+            }
+            setTimeout(() => check(), 3000);
+        }
+        function check() {
+            var trgt = document.getElementById("target");
+            if (myTime == null) {
+                trgt.innerHTML = "Too Slow"
+            }
+            else {
+                var buttonTime = Date.now();
+                var diff = buttonTime - myTime;
+                trgt.innerHTML = "Time was " + diff;
+            }
+        }
     </script>
 </body>
 
