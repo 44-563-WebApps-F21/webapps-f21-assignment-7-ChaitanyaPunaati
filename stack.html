@@ -36,7 +36,27 @@
     <button onclick="makeNewDiv()">Push value</button>
     <button onclick="popItem()">POP values</button>
     <button onclick="zap()">Zap values</button>
+    <button onclick="unique()">Unique</button>
     <script>
+
+function unique() {
+            var array = [];
+            var stack = document.getElementsByClassName("stack");
+            var length = stack.length;
+            var cnt = 0;
+            for (var value = 0; value < length; value++) {
+                if (array.includes(stack[value - cnt].innerHTML)) {
+                    stack[value - cnt].remove();
+                    cnt++;
+                }
+                else {
+                    array.push(stack[value].innerHTML);
+                }
+            }
+
+            console.log(array);
+        }
+
         function makeNewDiv() {
             /* make the div and its text */
             let input = document.getElementById("input").value;

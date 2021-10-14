@@ -27,10 +27,11 @@
         }
         function startTime() {
             var count = document.getElementById("countdown");
-            for (let i = 0; i <= 3; i++) {
-                var myid = setTimeout(function () { count.innerHTML = "Count: " + i }, (3 - i) * 1000);
+            var x = Math.floor(Math.random()*10 + 2);
+            for (let i = 0; i <= x; i++) {
+                var myid = setTimeout(function () { count.innerHTML = "Count: " + i }, (x - i) * 1000);
             }
-            setTimeout(() => check(), 3000);
+            setTimeout(() => check(), x*1000);
         }
         function check() {
             var trgt = document.getElementById("target");
