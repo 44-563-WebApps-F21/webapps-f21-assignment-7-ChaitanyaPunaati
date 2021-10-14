@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stack Page</title>
+</head>
+<body>
+    <h2>Chaitanya Punaati builds a stack</h2>
+    <input type="text" id="text">
+    <div class="flex-container" id="target">
+        <div class="stack">row item 1</div>
+        <div class="stack">row item 2</div>
+        <div class="stack">row item 3</div>
+    </div>
+    <button onclick="makeNewDiv()">Push value</button>
+    <script>
+        function makeNewDiv() {
+            /* make the div and its text */
+            let input = document.getElementById("input").value;
+            alert(input);
+            let element = document.createElement("div")
+            element.innerHTML = input;
+            element.style.color = "light pink"
+
+            /* add it to the container */
+            document.getElementById('target').appendChild(element)
+
+        }
+        </script>
+</body>

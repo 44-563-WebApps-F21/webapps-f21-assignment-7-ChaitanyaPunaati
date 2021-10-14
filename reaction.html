@@ -27,9 +27,8 @@
         }
         function startTime() {
             var count = document.getElementById("countdown");
-            var x = Math.floor(Math.random()*10 + 2);
-            for (let i = 0; i <= x; i++) {
-                var myid = setTimeout(function () { count.innerHTML = "Count: " + i }, (x - i) * 1000);
+            for (let i = 0; i <= 3; i++) {
+                var myid = setTimeout(function () { count.innerHTML = "Count: " + i }, (3 - i) * 1000);
             }
             setTimeout(() => check(), 3000);
         }
